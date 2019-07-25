@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"> <!-- description -->
+<html lang="en"> <!-- 04 .replace( iKsearchString, iKfunction ); -->
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -9,14 +9,9 @@
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.10/mediaelementplayer.min.css" rel="stylesheet" type="text/css">
     <link href="zIK/02css/oikGrid.css" rel="stylesheet" type="text/css">
 <!--    <link href="zIK/02css/oikFlex.css" rel="stylesheet" type="text/css">-->
-    <title></title>
+    <title>04</title>
 <style>
 /* + + + + + + + + + + + STYLE ---------------------------*/
-
-
-/**/
-
-
 /*---------------------- /style //////////////////////////*/
 </style>
 </head>
@@ -29,11 +24,6 @@
      instructions how to enable JavaScript in your web browser</a>.
     </noscript>
 <!--+ + + + + + + + + + + MAIN --------------------------->
-
-
-<!-- -->
-
-
 <!---------------------- /main /////////////////////////-->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/popper.js@1.15.0/dist/umd/popper.min.js" type="text/javascript"></script>
@@ -45,7 +35,25 @@
 'use strict';
 
 
-/**/
+/* .replace( iKsearchString, iKfunction ); */
+	const iKregExS = /ik/gi,   /*1+*/
+		  iKstring = ".ik is IK you iKk",
+		  iKnewString = iKstring.replace( iKregExS, iKfunction ); /*2+*/
+
+	function iKfunction (iKsearchString, iKstartIndex, iKstringContext) { /*3+*/
+		printD( iKsearchString ); /*OP "ik", "IK", "iK" */ /*4+*/
+		printD( iKstartIndex ); /*OP 1, 7, 14 */ /*5+*/
+		printD( iKstringContext ); /*OP ".ik is IK you iKk" =for all 3 */ /*6+*/
+	}; /*7+*/
+
+	/*1+ i included modifier g and i, so it can found more than one match if there are any, and it will ignore any case sensitive.
+	2+ you can use function instead of iKstringReplacement to do interestings things.
+	2+ iK from what i can see .replace() sends 3 arguments to the function, but seems like more on mdn. maybe more research might be required.
+	3+ from my findings, only 3 parameters do something, extra parameter are undefined. unless i missed something on mdn.
+	4+ first parameter you get the search string pattern itself.
+	5+ the first index number of where the search string pattern is found.
+	6+ iKstringContext is the full string that .replace() is using to search and modify.
+	7+ iK i notice that function with .replace() works similarly like a loop, as it will give all 3 parameter info for the first iKsearchString pattern, and than the next iKsearchString pattern. 	*/
 
 
  /*OP */

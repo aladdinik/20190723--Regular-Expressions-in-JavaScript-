@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"> <!-- description -->
+<html lang="en"> <!-- 02 .match() with regEx -->
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -9,14 +9,9 @@
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.10/mediaelementplayer.min.css" rel="stylesheet" type="text/css">
     <link href="zIK/02css/oikGrid.css" rel="stylesheet" type="text/css">
 <!--    <link href="zIK/02css/oikFlex.css" rel="stylesheet" type="text/css">-->
-    <title></title>
+    <title>02</title>
 <style>
 /* + + + + + + + + + + + STYLE ---------------------------*/
-
-
-/**/
-
-
 /*---------------------- /style //////////////////////////*/
 </style>
 </head>
@@ -29,11 +24,6 @@
      instructions how to enable JavaScript in your web browser</a>.
     </noscript>
 <!--+ + + + + + + + + + + MAIN --------------------------->
-
-
-<!-- -->
-
-
 <!---------------------- /main /////////////////////////-->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/popper.js@1.15.0/dist/umd/popper.min.js" type="text/javascript"></script>
@@ -45,7 +35,17 @@
 'use strict';
 
 
-/**/
+/* .match() with regEx */
+	/* iKstring.match( iKregEXString ); which returns an array */
+	const iKregExString = /[0-9]+/g,  /*1+*/
+		  iKstring = "60sec in 1min, 60 min in 1hr.";
+
+	printD( iKstring.match( iKregExString ) ); /*OP [ "60", "1", "60", "1" ] */
+
+	/*1+ same as /\d+/g .
+	1+ the + is necessary to make a one set of numbers, otherwise we would get indivdual numbers.
+ 		+\ [ "6", "0", "1", "6", "0", "1" ]  =if the + was not added.
+	1+ without the g, you would only get the first number (6) or set of numbers (60) and nothing more. */
 
 
  /*OP */
