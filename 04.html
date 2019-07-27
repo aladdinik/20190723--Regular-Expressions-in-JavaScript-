@@ -46,12 +46,12 @@
 		printD( iKstringContext ); /*OP ".ik is IK you iKk" =for all 3 */ /*6+*/
 	}; /*7+*/
 
-	/*1+ i included modifier g and i, so it can found more than one match if there are any, and it will ignore any case sensitive.
+	/*1+ i included modifier g and i, so it can found more than one match if there are any, and also it will ignore any case sensitive.
 	2+ you can use function instead of iKstringReplacement to do interestings things.
 	2+ iK from what i can see .replace() sends 3 arguments to the function, but seems like more on mdn. maybe more research might be required.
-	3+ from my findings, only 3 parameters do something, extra parameter are undefined. unless i missed something on mdn.
+	3+ from my findings, only 3 parameters do something, any extra parameters you add will become undefined. unless i misunderstood something on mdn.
 	4+ first parameter you get the search string pattern itself.
-	5+ the first index number of where the search string pattern is found.
+	5+ second parameter you get the first index number of where the search string pattern is found.
 	6+ iKstringContext is the full string that .replace() is using to search and modify.
 	7+ iK i notice that function with .replace() works similarly like a loop, as it will give all 3 parameter info for the first iKsearchString pattern, and than the next iKsearchString pattern. 	*/
 
