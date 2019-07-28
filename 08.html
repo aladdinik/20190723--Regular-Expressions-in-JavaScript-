@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"> <!-- description -->
+<html lang="en"> <!-- 08 reformatting phone number -->
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -9,14 +9,9 @@
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.10/mediaelementplayer.min.css" rel="stylesheet" type="text/css">
     <link href="zIK/02css/oikGrid.css" rel="stylesheet" type="text/css">
 <!--    <link href="zIK/02css/oikFlex.css" rel="stylesheet" type="text/css">-->
-    <title></title>
+    <title>08 reformatting phone number</title>
 <style>
 /* + + + + + + + + + + + STYLE ---------------------------*/
-
-
-/**/
-
-
 /*---------------------- /style //////////////////////////*/
 </style>
 </head>
@@ -29,11 +24,6 @@
      instructions how to enable JavaScript in your web browser</a>.
     </noscript>
 <!--+ + + + + + + + + + + MAIN --------------------------->
-
-
-<!-- -->
-
-
 <!---------------------- /main /////////////////////////-->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/popper.js@1.15.0/dist/umd/popper.min.js" type="text/javascript"></script>
@@ -45,7 +35,23 @@
 'use strict';
 
 
-/**/
+/* reformatting phone number */
+	const iKnumbers = 1234567890, /*1+*/
+		  iKstringNumber = iKnumbers.toString(), /*2+*/
+		  iKregEx = /^(\d{3})(\d{3})(\d{4})$/, /*3+*/
+		  iKreplace = "($1) $2-$3"; /*4+*/
+
+	printD( iKstringNumber ); /*OP "1234567890"*/
+
+	printD(
+		iKstringNumber.replace( iKregEx, iKreplace )
+	); /*OP "(123) 456-7890"*/ /*5+*/
+
+	/*1+ numbers and not string.
+	2+ .toString() convert numbers into strings.
+	3+ it reads the 10 number format and collect 3 groups (with parenthesis) for the $ key character to use.
+	4+ now the numbers can be reformatted as you see fit.
+	5+ straight forward change with .replace() .*/
 
 
  /*OP */
